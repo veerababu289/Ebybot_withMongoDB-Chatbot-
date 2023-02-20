@@ -1,0 +1,27 @@
+{
+    "title": "Tell us about yourself",
+    "body": "We just need a few more details to get you food!",
+    "disclaimer": "Don't worry, we'll never share or sell your information.",
+    "properties": [
+        {
+            "id": "name",
+            "label": "Your name",
+            "validation": "",
+            "error": "Please enter your name"
+        },
+        {
+            "id": "email",
+            "label": "Your email",
+            "validation": "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+[.][A-Za-z0-9-]{2,4}$",
+            "error": "Please enter a valid email address"
+        },
+        {
+            "id": "password",
+            "label": "Password (xxxxxxxxxx)",
+            "validation": "",
+            "error": "Create a strong password"
+        }
+    ],
+    "thumbnailUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvV3Y-_AmkAo-k50HvfxhC6NEM21wvtZINk-RmhVKibKERkIcMzbt79NY42lCGe8D_3eU&usqp=CAU",
+    "thumbnailAlt": "Diver in the Great Barrier Reef"
+}

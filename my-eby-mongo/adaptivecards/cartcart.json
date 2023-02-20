@@ -1,0 +1,162 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "CART ",
+            "wrap": true,
+            "horizontalAlignment": "Center",
+            "size": "Large",
+            "weight": "Bolder"
+        },
+        {
+            "$data": "${cart}",
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "${url}"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${name}",
+                            "wrap": true,
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "cost : ${cost}$",
+                            "wrap": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Quantity",
+                            "wrap": true
+                        },
+                        {
+                            "type": "Input.Text",
+                            "placeholder": "0",
+                            "value": "${quantity}",
+                            "id": "${name}"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "39px",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWbpgiXMbgRaJtLnRHPUsdAXm8GrQUMjNGDYVzH-zq&s",
+                            "selectAction": {
+                                "type": "Action.Submit",
+                                "data": {
+                                    "id":"deleteItem",
+                                    "materialId": "${materialId}"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "separator": true
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch"
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Total cost:",
+                            "wrap": true,
+                            "weight": "Bolder"
+                        }
+                    ],
+                    "horizontalAlignment": "Right"
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "500$",
+                            "wrap": true,
+                            "horizontalAlignment": "Center"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Save Changes",
+                                    "data": {
+                                        "id": "savechanges"
+                                       }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.Submit",
+                                    "title": "Place order",
+                                    "data": {
+                                             "id": "orderPlaced"
+                                            }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
